@@ -1,0 +1,16 @@
+CREATE TABLE tblarticles (
+	id serial PRIMARY KEY, 
+	title VARCHAR(30) NOT NULL, 
+	description TEXT NOT NULL, 
+	author VARCHAR(30) NOT NULL, 
+	create_date VARCHAR(30), 
+	thumbnail VARCHAR(30) NOT NULL,
+	status INT NOT NULL,
+	category_id INT REFERENCES tblcategories(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE tblcategories (
+	id SERIAL PRIMARY KEY, 
+	name VARCHAR(30) NOT NULL,
+	status INT NOT NULL
+);
