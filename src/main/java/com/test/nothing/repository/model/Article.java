@@ -10,7 +10,8 @@ public class Article {
     private String author;
     private String create_date;
     private String thumbnail;
-    private int category_id = 0;
+    private int status = 1;
+    private int category_id;
 
     @Autowired
     private Category category;

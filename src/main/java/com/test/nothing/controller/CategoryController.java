@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 public class CategoryController {
 
     @Autowired
-
     CategoryRepository categoryRepository;
 
     @GetMapping(value = "/add/{name}")
